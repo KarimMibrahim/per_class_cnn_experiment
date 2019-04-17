@@ -30,8 +30,11 @@ set_random_seed(2)
 
 SOURCE_PATH = "/cluster/storage/kibrahim/per_class_cnn_experiment/"
 SPECTROGRAMS_PATH = "/cluster/storage/kibrahim/mel_specs/"
+FRAMES_NUMBER = 646
+SEGMENT_START = 323 # starting frame for segmentation, i.e. for a 30 seconds segment, start at frame 323 = ~15 seconds
+RESULTS_SUMMARY_SAVING_NAME = "C4_adadelta_30secs_Results.csv"
 
-INPUT_SHAPE = (1292, 96, 1)
+INPUT_SHAPE = (FRAMES_NUMBER, 96, 1)
 LABELS_LIST = ['car', 'chill', 'club', 'dance', 'gym', 'happy', 'morning', 'night', 'park', 'party', 'relax', 'running',
                'sad',
                'shower', 'sleep', 'summer', 'train', 'training', 'work', 'workout']
@@ -81,15 +84,16 @@ def load_train_set_raw(TRAIN_PATH,SPECTROGRAM_PATH=SPECTROGRAMS_PATH):
     train_ground_truth = pd.read_csv(TRAIN_PATH)
     train_classes = train_ground_truth.binary_label.values
     train_classes = train_classes.astype(int)
-    spectrograms = np.zeros([len(train_ground_truth), 1292, 96])
+    spectrograms = np.zeros([len(train_ground_truth), FRAMES_NUMBER, 96])
     songs_ID = np.zeros([len(train_ground_truth), 1])
     for idx, filename in enumerate(list(train_ground_truth.song_id)):
         try:
             spect = np.load(os.path.join(SPECTROGRAM_PATH, str(filename) + '.npz'))['feat']
         except:
+            print("Failed to load track with song_id = " + str(filename))
             continue
         if (spect.shape == (1, 1292, 96)):
-            spectrograms[idx] = spect
+            spectrograms[idx] = spect[:,SEGMENT_START:FRAMES_NUMBER,:]
             songs_ID[idx] = filename
     spectrograms = np.expand_dims(spectrograms, axis=3)
     return spectrograms, train_classes
@@ -100,7 +104,7 @@ def load_test_set_raw(TEST_PATH,SPECTROGRAM_PATH=SPECTROGRAMS_PATH):
     test_ground_truth = pd.read_csv(TEST_PATH)
     test_classes = test_ground_truth.binary_label.values
     test_classes = test_classes.astype(int)
-    spectrograms = np.zeros([len(test_ground_truth), 1292, 96])
+    spectrograms = np.zeros([len(test_ground_truth), FRAMES_NUMBER, 96])
     songs_ID = np.zeros([len(test_ground_truth), 1])
     for idx, filename in enumerate(list(test_ground_truth.song_id)):
         try:
@@ -108,7 +112,7 @@ def load_test_set_raw(TEST_PATH,SPECTROGRAM_PATH=SPECTROGRAMS_PATH):
         except:
             continue
         if (spect.shape == (1, 1292, 96)):
-            spectrograms[idx] = spect
+            spectrograms[idx] = spect[:,SEGMENT_START:FRAMES_NUMBER,:]
             songs_ID[idx] = filename
     spectrograms = np.expand_dims(spectrograms, axis=3)
     return spectrograms, test_classes
@@ -182,28 +186,27 @@ def plot_loss_acuracy(history, path, label):
 
 
 def main():
-    # splitting datasets
-    # split_dataset()
+    # initialize results array 
     labels_results = np.zeros([20,6])
     # Loading datasets
     for idx,label in enumerate(LABELS_LIST):
         print("training for class : " + label)
         training_dataset,training_classes = load_train_set_raw(os.path.join(SOURCE_PATH, "GroundTruth/", 
                                                                 label+"_train_groundtruth.csv"))
+        X_train, X_val, y_train, y_val = train_test_split(training_dataset, training_classes, test_size=0.2, random_state=0,shuffle=False)
+        # Defining saving paths
         exp_dir = os.path.join(SOURCE_PATH, "experiments/")
         experiment_name = os.path.join(label + "_Per_class_", strftime("%Y-%m-%d_%H-%M-%S", localtime()))
+        Model_save_path = os.path.join(SOURCE_PATH, "Saved_models", label + "_Per_class_", strftime("%Y-%m-%d_%H-%M-%S", localtime()))
         fit_config = {
-            #"steps_per_epoch": 1000,
-            "batch_size":64,
-            "epochs": 20,
+            "batch_size":32,
+            "epochs": 30,
             "initial_epoch": 0,
-            #"validation_steps": 100,
-            "validation_split":0.1,
             "callbacks": [
                 TensorBoard(log_dir=os.path.join(exp_dir, experiment_name)),
-                ModelCheckpoint(os.path.join(exp_dir, experiment_name, "last_iter.h5"),
+                ModelCheckpoint(os.path.join(Model_save_path, "last_iter.h5"),
                                 save_weights_only=False),
-                ModelCheckpoint(os.path.join(exp_dir, experiment_name, "best_eval.h5"),
+                ModelCheckpoint(os.path.join(Model_save_path, "best_eval.h5"),
                                 save_best_only=True,
                                 monitor="val_loss",
                                 save_weights_only=False)
@@ -212,7 +215,7 @@ def main():
         # Printing the command to run tensorboard [Just to remember]
         print("Execute the following in a terminal:\n" + "tensorboard --logdir=" + os.path.join(exp_dir, experiment_name))
         model = get_model()
-        compile_model(model)
+        compile_model(model,optimizer = 'Adadelta')
         history = model.fit(training_dataset,training_classes, **fit_config);
         spectrograms, test_classes = load_test_set_raw(os.path.join(SOURCE_PATH, "GroundTruth/", 
                                                                 label+"_test_groundtruth.csv"))
@@ -222,7 +225,7 @@ def main():
         plot_loss_acuracy(history,os.path.join(exp_dir, experiment_name),label)
         
     labels_results_df = pd.DataFrame(labels_results,index = LABELS_LIST , columns  = [ "Training Size","Accuracy", "AUC_ROC", "Recall", "Precision", "f1"])
-    labels_results_df.to_csv(os.path.join(SOURCE_PATH, 'all_results.csv'))
+    labels_results_df.to_csv(os.path.join(SOURCE_PATH, RESULTS_SUMMARY_SAVING_NAME))
      
      
 if __name__ == "__main__":
