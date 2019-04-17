@@ -1,0 +1,3 @@
+Train datset size: 5739
+validation datset size: 637
+Test datset size: 1594

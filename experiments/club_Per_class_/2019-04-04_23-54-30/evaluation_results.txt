@@ -1,0 +1,2 @@
+Exact match accuracy is: 60.0597609561753%
+Area Under the Curve (AUC) is: 0.7017503125558134
