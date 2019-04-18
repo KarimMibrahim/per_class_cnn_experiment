@@ -1,0 +1,10 @@
+[I 10:07:32.790 NotebookApp] Serving notebooks from local directory: /cluster/storage/kibrahim/per_class_cnn_experiment
+[I 10:07:32.791 NotebookApp] The Jupyter Notebook is running at:
+[I 10:07:32.792 NotebookApp] http://localhost:8888/?token=3bce0ce6cae1e7b4c2dd174c1464f87ac02de8e1b00736a3
+[I 10:07:32.793 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:07:32.857 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///cluster/storage/kibrahim/.local/share/jupyter/runtime/nbserver-25902-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=3bce0ce6cae1e7b4c2dd174c1464f87ac02de8e1b00736a3

@@ -6,6 +6,10 @@ from time import strftime, localtime
 import matplotlib.pyplot as plt
 plt.rcParams.update({'font.size':22})
 
+
+# my code
+from utilities_perclass import load_train_set_raw,load_test_set_raw,evaluate_model,plot_loss_acuracy,plot_confusion_matrix,get_TP_TN_FP_FN
+
 # Deep Learning
 import tensorflow as tf
 #from tensorflow.keras.models import Sequential
@@ -16,6 +20,7 @@ import dzr_ml_tf.data_pipeline as dp
 from dzr_ml_tf.label_processing import tf_multilabel_binarize
 #from tensorflow.keras.callbacks import ModelCheckpoint, TensorBoard
 from keras.callbacks import ModelCheckpoint, TensorBoard
+from keras import optimizers
 
 
 # Machine Learning preprocessing and evaluation
@@ -32,7 +37,8 @@ SOURCE_PATH = "/cluster/storage/kibrahim/per_class_cnn_experiment/"
 SPECTROGRAMS_PATH = "/cluster/storage/kibrahim/mel_specs/"
 FRAMES_NUMBER = 646
 SEGMENT_START = 323 # starting frame for segmentation, i.e. for a 30 seconds segment, start at frame 323 = ~15 seconds
-RESULTS_SUMMARY_SAVING_NAME = "C4_adadelta_30secs_Results.csv"
+RESULTS_SAVING_Path = "C4_adadelta_30secs_Results"
+optimization = optimizers.Adadelta()
 
 INPUT_SHAPE = (FRAMES_NUMBER, 96, 1)
 LABELS_LIST = ['car', 'chill', 'club', 'dance', 'gym', 'happy', 'morning', 'night', 'park', 'party', 'relax', 'running',
@@ -79,112 +85,6 @@ def compile_model(model, loss='binary_crossentropy', optimizer='sgd', metrics=['
     model.compile(loss=loss, optimizer=optimizer, metrics=metrics)
 
     
-def load_train_set_raw(TRAIN_PATH,SPECTROGRAM_PATH=SPECTROGRAMS_PATH):
-    # Loading testset groundtruth
-    train_ground_truth = pd.read_csv(TRAIN_PATH)
-    train_classes = train_ground_truth.binary_label.values
-    train_classes = train_classes.astype(int)
-    spectrograms = np.zeros([len(train_ground_truth), FRAMES_NUMBER, 96])
-    songs_ID = np.zeros([len(train_ground_truth), 1])
-    for idx, filename in enumerate(list(train_ground_truth.song_id)):
-        try:
-            spect = np.load(os.path.join(SPECTROGRAM_PATH, str(filename) + '.npz'))['feat']
-        except:
-            print("Failed to load track with song_id = " + str(filename))
-            continue
-        if (spect.shape == (1, 1292, 96)):
-            spectrograms[idx] = spect[:,SEGMENT_START:FRAMES_NUMBER,:]
-            songs_ID[idx] = filename
-    spectrograms = np.expand_dims(spectrograms, axis=3)
-    return spectrograms, train_classes
-
-
-def load_test_set_raw(TEST_PATH,SPECTROGRAM_PATH=SPECTROGRAMS_PATH):
-    # Loading testset groundtruth
-    test_ground_truth = pd.read_csv(TEST_PATH)
-    test_classes = test_ground_truth.binary_label.values
-    test_classes = test_classes.astype(int)
-    spectrograms = np.zeros([len(test_ground_truth), FRAMES_NUMBER, 96])
-    songs_ID = np.zeros([len(test_ground_truth), 1])
-    for idx, filename in enumerate(list(test_ground_truth.song_id)):
-        try:
-            spect = np.load(os.path.join(SPECTROGRAM_PATH, str(filename) + '.npz'))['feat']
-        except:
-            continue
-        if (spect.shape == (1, 1292, 96)):
-            spectrograms[idx] = spect[:,SEGMENT_START:FRAMES_NUMBER,:]
-            songs_ID[idx] = filename
-    spectrograms = np.expand_dims(spectrograms, axis=3)
-    return spectrograms, test_classes
-
-
-def evaluate_model(model, spectrograms, test_classes, saving_path):
-    """
-    Evaluates a given model using accuracy, area under curve and hamming loss
-    :param model: model to be evaluated
-    :param spectrograms: the test set spectrograms as an np.array
-    :param test_classes: the ground truth labels
-    :return: accuracy, auc_roc
-    """
-    test_pred_prob = model.predict(spectrograms)
-    test_pred = np.round(test_pred_prob)
-    # Accuracy
-    accuracy = 100 * accuracy_score(test_classes, test_pred)
-    print("Exact match accuracy is: " + str(accuracy) + "%")
-    # Area Under the Receiver Operating Characteristic Curve (ROC AUC)
-    auc_roc = roc_auc_score(test_classes, test_pred_prob)
-    print("Area Under the Curve (AUC) is: " + str(auc_roc))
-    recall = recall_score(test_classes, test_pred)
-    print("recall is: " + str(recall))
-    precision = precision_score(test_classes, test_pred)
-    print("precision is: " + str(precision))
-    f1 = f1_score(test_classes, test_pred)
-    print("f1 is: " + str(f1)) 
-    with open(os.path.join(saving_path, "evaluation_results.txt"), "w") as f:
-        f.write("Exact match accuracy is: " + str(accuracy) + "%\n" + "Area Under the Curve (AUC) is: " + str(auc_roc)
-         + "\n" + "recall is: " + str(recall) + "\n" + "precision is: " + str(precision) + "\n" + "f1 is: " + str(f1))
-    print("saving prediction to disk")
-    np.savetxt(os.path.join(saving_path, 'predictions.out'), test_pred_prob, delimiter=',')
-    np.savetxt(os.path.join(saving_path, 'test_ground_truth_classes.txt'), test_classes, delimiter=',')
-    return accuracy, auc_roc, recall, precision, f1
-
-
-
-def save_model(model, path):
-    # serialize model to JSON
-    model_json = model.to_json()
-    with open(os.path.join(path, "model.json"), "w") as json_file:
-        json_file.write(model_json)
-    # serialize weights to HDF5
-    model.save_weights(os.join.path(path, "model.h5"))
-    print("Saved model to disk")
-
-
-def plot_loss_acuracy(history, path, label):
-    # Plot training & validation accuracy values
-    plt.figure(figsize=(10, 10))
-    plt.plot(history.history['acc'])
-    plt.plot(history.history['val_acc'])
-    plt.title('Model accuracy for ' + label + " class")
-    plt.ylabel('Accuracy')
-    plt.xlabel('Epoch')
-    plt.legend(['Train', 'Test'], loc='upper left')
-    plt.savefig(os.path.join(path,label + "_model_accuracy.png"))
-    plt.savefig(os.path.join(path,label  + "_model_accuracy.pdf"), format='pdf')
-    #plt.savefig(os.path.join(path,label + "_model_accuracy.eps"), format='eps', dpi=900)
-    #Plot training & validation loss values
-    plt.figure(figsize=(10, 10))
-    plt.plot(history.history['loss'])
-    plt.plot(history.history['val_loss'])
-    plt.title('Model loss ' + label + "class")
-    plt.ylabel('Loss')
-    plt.xlabel('Epoch')
-    plt.legend(['Train', 'Test'], loc='upper left')
-    plt.savefig(os.path.join(path,label + "_model_loss.png"))
-    plt.savefig(os.path.join(path,label + "_model_loss.pdf"), format='pdf')
-    #plt.savefig(os.path.join(path,label + "_model_loss.eps"), format='eps', dpi=900)
-
-
 def main():
     # initialize results array 
     labels_results = np.zeros([20,6])
@@ -192,21 +92,21 @@ def main():
     for idx,label in enumerate(LABELS_LIST):
         print("training for class : " + label)
         training_dataset,training_classes = load_train_set_raw(os.path.join(SOURCE_PATH, "GroundTruth/", 
-                                                                label+"_train_groundtruth.csv"))
+                                                                label+"_train_groundtruth.csv"),FRAMES_NUMBER,SEGMENT_START)
         X_train, X_val, y_train, y_val = train_test_split(training_dataset, training_classes, test_size=0.2, random_state=0,shuffle=False)
         # Defining saving paths
-        exp_dir = os.path.join(SOURCE_PATH, "experiments/")
+        exp_dir = os.path.join(SOURCE_PATH, "experiments/",RESULTS_SAVING_Path)
         experiment_name = os.path.join(label + "_Per_class_", strftime("%Y-%m-%d_%H-%M-%S", localtime()))
-        Model_save_path = os.path.join(SOURCE_PATH, "Saved_models", label + "_Per_class_", strftime("%Y-%m-%d_%H-%M-%S", localtime()))
+        Model_save_path = os.path.join(SOURCE_PATH, "Saved_models/", label + "_Per_class_", strftime("%Y-%m-%d_%H-%M-%S", localtime()))
         fit_config = {
             "batch_size":32,
             "epochs": 30,
             "initial_epoch": 0,
             "callbacks": [
                 TensorBoard(log_dir=os.path.join(exp_dir, experiment_name)),
-                ModelCheckpoint(os.path.join(Model_save_path, "last_iter.h5"),
+                ModelCheckpoint(os.path.join(exp_dir, experiment_name, "last_iter.h5"),
                                 save_weights_only=False),
-                ModelCheckpoint(os.path.join(Model_save_path, "best_eval.h5"),
+                ModelCheckpoint(os.path.join(exp_dir, experiment_name, "best_eval.h5"),
                                 save_best_only=True,
                                 monitor="val_loss",
                                 save_weights_only=False)
@@ -215,17 +115,20 @@ def main():
         # Printing the command to run tensorboard [Just to remember]
         print("Execute the following in a terminal:\n" + "tensorboard --logdir=" + os.path.join(exp_dir, experiment_name))
         model = get_model()
-        compile_model(model,optimizer = 'Adadelta')
-        history = model.fit(training_dataset,training_classes, **fit_config);
-        spectrograms, test_classes = load_test_set_raw(os.path.join(SOURCE_PATH, "GroundTruth/", 
-                                                                label+"_test_groundtruth.csv"))
-        accuracy, auc_roc, recall, precision, f1 = evaluate_model(model, spectrograms, test_classes,
-                                                      saving_path=os.path.join(exp_dir, experiment_name))
-        labels_results[idx,:] = [len(training_classes),accuracy, auc_roc, recall, precision, f1]
+        compile_model(model,optimizer= optimization)
+        history = model.fit(X_train,y_train, validation_data=(X_val, y_val), **fit_config);
+        spectrograms, test_classes,songs_ID = load_test_set_raw(os.path.join(SOURCE_PATH, "GroundTruth/", 
+                                                                label+"_test_groundtruth.csv"),FRAMES_NUMBER,SEGMENT_START)
+        test_pred_prob = model.predict(spectrograms)
+        test_pred = np.round(test_pred_prob)  
+        accuracy, auc_roc, recall, precision, f1 = evaluate_model(test_pred_prob,test_pred, spectrograms, test_classes,
+                                                      saving_path=os.path.join(exp_dir, experiment_name)) 
+        get_TP_TN_FP_FN(songs_ID,test_pred,test_classes,os.path.join(exp_dir, experiment_name),label) # saving samples of true negative, false negativest etc..
         plot_loss_acuracy(history,os.path.join(exp_dir, experiment_name),label)
-        
+        plot_confusion_matrix(test_classes,predictions,["Negative","Positive"],os.path.join(exp_dir, experiment_name),label)
+        labels_results[idx,:] = [len(training_classes),accuracy, auc_roc, recall, precision, f1]        
     labels_results_df = pd.DataFrame(labels_results,index = LABELS_LIST , columns  = [ "Training Size","Accuracy", "AUC_ROC", "Recall", "Precision", "f1"])
-    labels_results_df.to_csv(os.path.join(SOURCE_PATH, RESULTS_SUMMARY_SAVING_NAME))
+    labels_results_df.to_csv(os.path.join(exp_dir, 'results_summary.csv'))
      
      
 if __name__ == "__main__":

@@ -7,8 +7,8 @@
 #$ -j y
 #$ -l hostname=tsicluster11
 #$ -l gpu=1
-#$ -o /ldaphome/kibrahim/per_class_classifier/NOTEBOOK.txt
-#$ -e /ldaphome/kibrahim/per_class_classifier/NOTEBOOK.log
+#$ -o /ldaphome/kibrahim/per_class_cnn_experiment/NOTEBOOK.txt
+#$ -e /ldaphome/kibrahim/per_class_cnn_experiment/NOTEBOOK.log
 
 source /ldaphome/kibrahim/context_classification_cnn/env_tf/bin/activate
 jupyter notebook --no-browser --port=8888

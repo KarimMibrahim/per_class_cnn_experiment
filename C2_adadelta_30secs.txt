@@ -1,0 +1,554 @@
+Traceback (most recent call last):
+  File "./C2_adadelta_30secs.py", line 10, in <module>
+    import utilities_perclass
+ImportError: No module named 'utilities_perclass'
+Traceback (most recent call last):
+  File "./C2_adadelta_30secs.py", line 10, in <module>
+    import utilities_perclass
+  File "/cluster/storage/kibrahim/per_class_cnn_experiment/utilities_perclass.py", line 113
+    def plot_confusion_matrix(y_true, y_pred, classes, path, label)
+                                                                  ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "./C2_adadelta_30secs.py", line 10, in <module>
+    import utilities_perclass
+  File "/cluster/storage/kibrahim/per_class_cnn_experiment/utilities_perclass.py", line 69
+    accuracy = 100 * accuracy_score(test_classes, test_pred):
+                                                            ^
+SyntaxError: invalid syntax
+Using TensorFlow backend.
+training for class : car
+Traceback (most recent call last):
+  File "./C2_adadelta_30secs.py", line 134, in <module>
+    main()
+  File "./C2_adadelta_30secs.py", line 93, in main
+    training_dataset,training_classes = load_train_set_raw(os.path.join(SOURCE_PATH, "GroundTruth/", 
+NameError: name 'load_train_set_raw' is not defined
+  File "./C2_adadelta_30secs.py", line 10
+    from utilities_perclass import load_train_set_raw,load_test_set_raw,evaluate_model,plot_loss_acuracy,plot_confusion_matrix,get_TP_TN_FP_FN,
+                                  ^
+SyntaxError: trailing comma not allowed without surrounding parentheses
+Using TensorFlow backend.
+training for class : car
+Traceback (most recent call last):
+  File "./C2_adadelta_30secs.py", line 134, in <module>
+    main()
+  File "./C2_adadelta_30secs.py", line 94, in main
+    label+"_train_groundtruth.csv"))
+TypeError: load_train_set_raw() missing 2 required positional arguments: 'FRAMES_NUMBER' and 'SEGMENT_START'
+2019-04-18 11:33:13.337227: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-18 11:33:13.350402: E tensorflow/core/common_runtime/direct_session.cc:170] Internal: failed initializing StreamExecutor for CUDA device ordinal 0: Internal: failed call to cuDevicePrimaryCtxRetain: CUDA_ERROR_INVALID_DEVICE
+Using TensorFlow backend.
+training for class : car
+Failed to load track with song_id = 552639822
+Failed to load track with song_id = 612980242
+Failed to load track with song_id = 629899802
+Failed to load track with song_id = 564946492
+Failed to load track with song_id = 506202182
+Failed to load track with song_id = 470699112
+Failed to load track with song_id = 548070762
+Failed to load track with song_id = 567133462
+Failed to load track with song_id = 628349842
+Failed to load track with song_id = 635615732
+Failed to load track with song_id = 524025632
+Failed to load track with song_id = 535768382
+Failed to load track with song_id = 498984862
+Failed to load track with song_id = 515078352
+Failed to load track with song_id = 608334282
+Failed to load track with song_id = 542720862
+Failed to load track with song_id = 506277062
+Failed to load track with song_id = 554384822
+Failed to load track with song_id = 493899162
+Failed to load track with song_id = 500064742
+Failed to load track with song_id = 620279432
+Failed to load track with song_id = 643805432
+Failed to load track with song_id = 561856482
+Failed to load track with song_id = 642966492
+Failed to load track with song_id = 572628772
+Failed to load track with song_id = 529353611
+Failed to load track with song_id = 542502742
+Failed to load track with song_id = 507966102
+Failed to load track with song_id = 479263002
+Failed to load track with song_id = 557824342
+Failed to load track with song_id = 504933772
+Failed to load track with song_id = 520914272
+Failed to load track with song_id = 608410222
+Failed to load track with song_id = 507567972
+Failed to load track with song_id = 595548862
+Failed to load track with song_id = 540912042
+Failed to load track with song_id = 510168222
+Failed to load track with song_id = 524666442
+Failed to load track with song_id = 602456592
+Failed to load track with song_id = 536256012
+Failed to load track with song_id = 573304032
+Failed to load track with song_id = 602265552
+Failed to load track with song_id = 572933012
+Failed to load track with song_id = 511064272
+Failed to load track with song_id = 558513642
+Failed to load track with song_id = 481569762
+Failed to load track with song_id = 601837462
+Failed to load track with song_id = 469896122
+Failed to load track with song_id = 503605772
+Failed to load track with song_id = 534802272
+Failed to load track with song_id = 624003812
+Failed to load track with song_id = 503112262
+Failed to load track with song_id = 593678032
+Failed to load track with song_id = 481466072
+Failed to load track with song_id = 577570612
+Failed to load track with song_id = 599043432
+Failed to load track with song_id = 501725722
+Failed to load track with song_id = 575269402
+Failed to load track with song_id = 477338022
+Failed to load track with song_id = 603095682
+Failed to load track with song_id = 593323102
+Failed to load track with song_id = 515078282
+Failed to load track with song_id = 496568232
+Failed to load track with song_id = 564947292
+Failed to load track with song_id = 565250402
+Failed to load track with song_id = 549316742
+Failed to load track with song_id = 487061642
+Failed to load track with song_id = 549308752
+Failed to load track with song_id = 481137942
+Failed to load track with song_id = 579893172
+Failed to load track with song_id = 480756042
+Failed to load track with song_id = 578715442
+Failed to load track with song_id = 609815922
+Failed to load track with song_id = 516050382
+Failed to load track with song_id = 576475842
+Failed to load track with song_id = 562763502
+Failed to load track with song_id = 628331482
+Failed to load track with song_id = 639462052
+Failed to load track with song_id = 624616122
+Failed to load track with song_id = 488467522
+Failed to load track with song_id = 509839402
+Failed to load track with song_id = 477426952
+Failed to load track with song_id = 479803692
+Failed to load track with song_id = 498318272
+Failed to load track with song_id = 526909832
+Failed to load track with song_id = 537474432
+Failed to load track with song_id = 616876632
+Failed to load track with song_id = 593711002
+Failed to load track with song_id = 576773712
+Failed to load track with song_id = 482854562
+Failed to load track with song_id = 612682552
+Failed to load track with song_id = 477890512
+Failed to load track with song_id = 622457822
+Failed to load track with song_id = 534087232
+Failed to load track with song_id = 526550202
+Failed to load track with song_id = 596368642
+Failed to load track with song_id = 488993822
+Failed to load track with song_id = 618800692
+Failed to load track with song_id = 502387572
+Failed to load track with song_id = 462817532
+Failed to load track with song_id = 606163512
+Failed to load track with song_id = 615908032
+Failed to load track with song_id = 466217482
+Failed to load track with song_id = 585617962
+Failed to load track with song_id = 553588362
+Failed to load track with song_id = 528269401
+Failed to load track with song_id = 492667322
+Failed to load track with song_id = 481934312
+Failed to load track with song_id = 494383372
+Failed to load track with song_id = 539864302
+Failed to load track with song_id = 494493252
+Failed to load track with song_id = 524964162
+Failed to load track with song_id = 516351592
+Failed to load track with song_id = 501041282
+Failed to load track with song_id = 528524941
+Failed to load track with song_id = 582434502
+Failed to load track with song_id = 644008472
+Failed to load track with song_id = 567885502
+Failed to load track with song_id = 506275792
+Failed to load track with song_id = 494330792
+Failed to load track with song_id = 504233162
+Failed to load track with song_id = 478881342
+Failed to load track with song_id = 506220342
+Failed to load track with song_id = 629767542
+Failed to load track with song_id = 571746352
+Failed to load track with song_id = 622836692
+Failed to load track with song_id = 512114282
+Failed to load track with song_id = 520699402
+Failed to load track with song_id = 463837412
+Failed to load track with song_id = 561865382
+Failed to load track with song_id = 592525802
+Failed to load track with song_id = 527772911
+Failed to load track with song_id = 504412492
+Failed to load track with song_id = 488652002
+Failed to load track with song_id = 506277672
+Failed to load track with song_id = 500016512
+Failed to load track with song_id = 512575682
+Failed to load track with song_id = 625249602
+Failed to load track with song_id = 511664652
+Failed to load track with song_id = 525889192
+Failed to load track with song_id = 506253132
+Failed to load track with song_id = 502194252
+Failed to load track with song_id = 503663952
+Failed to load track with song_id = 633922412
+Failed to load track with song_id = 601293512
+Failed to load track with song_id = 556377292
+Failed to load track with song_id = 470693712
+Failed to load track with song_id = 482668002
+Failed to load track with song_id = 629899832
+Failed to load track with song_id = 579928942
+Failed to load track with song_id = 538934202
+Failed to load track with song_id = 469066272
+Failed to load track with song_id = 612196342
+Failed to load track with song_id = 559662882
+Failed to load track with song_id = 467664102
+Failed to load track with song_id = 584476242
+Failed to load track with song_id = 630770812
+Failed to load track with song_id = 507610692
+Failed to load track with song_id = 499054672
+Failed to load track with song_id = 468403372
+Failed to load track with song_id = 602456572
+Failed to load track with song_id = 561852352
+Failed to load track with song_id = 498313382
+Failed to load track with song_id = 606747012
+Failed to load track with song_id = 517077892
+Failed to load track with song_id = 505027302
+Failed to load track with song_id = 462102362
+Failed to load track with song_id = 474177172
+Failed to load track with song_id = 469581032
+Failed to load track with song_id = 586465152
+Failed to load track with song_id = 524157382
+Failed to load track with song_id = 621212852
+Failed to load track with song_id = 460298852
+Failed to load track with song_id = 566984702
+Failed to load track with song_id = 501717002
+Failed to load track with song_id = 512588802
+Failed to load track with song_id = 487870972
+Failed to load track with song_id = 554992962
+Failed to load track with song_id = 526091832
+Failed to load track with song_id = 545272452
+Failed to load track with song_id = 551577712
+Failed to load track with song_id = 604054262
+Failed to load track with song_id = 492960812
+Failed to load track with song_id = 578072442
+Failed to load track with song_id = 481447542
+Failed to load track with song_id = 549963252
+Failed to load track with song_id = 513087492
+Failed to load track with song_id = 463084182
+Failed to load track with song_id = 608249132
+Failed to load track with song_id = 621781902
+Failed to load track with song_id = 520827342
+Failed to load track with song_id = 522622272
+Failed to load track with song_id = 529612381
+Failed to load track with song_id = 465654912
+Failed to load track with song_id = 576851272
+Failed to load track with song_id = 628349912
+Failed to load track with song_id = 503355442
+Failed to load track with song_id = 574992252
+Failed to load track with song_id = 547033192
+Failed to load track with song_id = 467913472
+Failed to load track with song_id = 485678772
+Failed to load track with song_id = 461288232
+Failed to load track with song_id = 601856282
+Failed to load track with song_id = 505986152
+Failed to load track with song_id = 489106392
+Failed to load track with song_id = 623008552
+Failed to load track with song_id = 474022212
+Failed to load track with song_id = 554666842
+Failed to load track with song_id = 633723562
+Failed to load track with song_id = 468974912
+Failed to load track with song_id = 486829512
+Failed to load track with song_id = 502782622
+Failed to load track with song_id = 510643112
+Failed to load track with song_id = 520827422
+Failed to load track with song_id = 623734102
+Failed to load track with song_id = 602456542
+Failed to load track with song_id = 549884522
+Failed to load track with song_id = 461288052
+Failed to load track with song_id = 496113412
+Failed to load track with song_id = 540584112
+Failed to load track with song_id = 499532222
+Failed to load track with song_id = 500322912
+Failed to load track with song_id = 529787351
+Failed to load track with song_id = 505509432
+Failed to load track with song_id = 532890892
+Failed to load track with song_id = 555188232
+Failed to load track with song_id = 469393962
+Failed to load track with song_id = 518318672
+Failed to load track with song_id = 460945872
+Failed to load track with song_id = 505015202
+Failed to load track with song_id = 556066892
+Failed to load track with song_id = 513121912
+Failed to load track with song_id = 480521542
+Failed to load track with song_id = 623723282
+Failed to load track with song_id = 482986812
+Failed to load track with song_id = 504056172
+Failed to load track with song_id = 618681552
+Failed to load track with song_id = 510081952
+Failed to load track with song_id = 559262232
+Failed to load track with song_id = 487057472
+Failed to load track with song_id = 524157412
+Failed to load track with song_id = 499435172
+Failed to load track with song_id = 508375372
+Failed to load track with song_id = 591097702
+Failed to load track with song_id = 572229412
+Failed to load track with song_id = 492984112
+Failed to load track with song_id = 469920182
+Failed to load track with song_id = 460320912
+Failed to load track with song_id = 539088732
+Failed to load track with song_id = 468895742
+Failed to load track with song_id = 626669892
+Failed to load track with song_id = 471750652
+Failed to load track with song_id = 468232842
+Failed to load track with song_id = 479573162
+Failed to load track with song_id = 630657212
+Failed to load track with song_id = 576226282
+Failed to load track with song_id = 475407592
+Failed to load track with song_id = 470202142
+Failed to load track with song_id = 482189422
+Failed to load track with song_id = 469695092
+Failed to load track with song_id = 576226242
+Failed to load track with song_id = 468657642
+Failed to load track with song_id = 551773542
+Failed to load track with song_id = 544193892
+Failed to load track with song_id = 493802422
+Failed to load track with song_id = 482986782
+Failed to load track with song_id = 490004972
+Failed to load track with song_id = 525889182
+Failed to load track with song_id = 634437312
+Failed to load track with song_id = 480611882
+Failed to load track with song_id = 568873952
+Failed to load track with song_id = 462942902
+Failed to load track with song_id = 507432292
+Failed to load track with song_id = 506275452
+Failed to load track with song_id = 500716922
+Failed to load track with song_id = 576740882
+Failed to load track with song_id = 503693262
+Failed to load track with song_id = 547499742
+Failed to load track with song_id = 500841552
+Failed to load track with song_id = 504011472
+Failed to load track with song_id = 550668682
+Failed to load track with song_id = 567048522
+Failed to load track with song_id = 593688972
+Failed to load track with song_id = 522774072
+Failed to load track with song_id = 493142222
+Failed to load track with song_id = 590612522
+Failed to load track with song_id = 577781352
+Failed to load track with song_id = 526210322
+Failed to load track with song_id = 540890082
+Failed to load track with song_id = 483146292
+Failed to load track with song_id = 534565312
+Failed to load track with song_id = 506368662
+Failed to load track with song_id = 472898502
+Failed to load track with song_id = 575034862
+Failed to load track with song_id = 504135722
+Failed to load track with song_id = 494466932
+Failed to load track with song_id = 559934912
+Failed to load track with song_id = 472898542
+Failed to load track with song_id = 511894152
+Failed to load track with song_id = 462815582
+Failed to load track with song_id = 613089512
+Failed to load track with song_id = 475207572
+Failed to load track with song_id = 482854612
+Failed to load track with song_id = 463069642
+Failed to load track with song_id = 542151552
+Failed to load track with song_id = 504691152
+Failed to load track with song_id = 509680212
+Failed to load track with song_id = 570707312
+Failed to load track with song_id = 477720992
+Failed to load track with song_id = 512682042
+Failed to load track with song_id = 535508892
+Failed to load track with song_id = 462086552
+Failed to load track with song_id = 528732821
+Failed to load track with song_id = 639467632
+Failed to load track with song_id = 496277042
+Failed to load track with song_id = 539900792
+Failed to load track with song_id = 607697972
+Failed to load track with song_id = 552825962
+Failed to load track with song_id = 562567102
+Failed to load track with song_id = 586909602
+Failed to load track with song_id = 571841682
+Failed to load track with song_id = 510139932
+Failed to load track with song_id = 527198331
+Failed to load track with song_id = 487057452
+Failed to load track with song_id = 467126502
+Failed to load track with song_id = 618688572
+Failed to load track with song_id = 508736402
+Failed to load track with song_id = 545996742
+Failed to load track with song_id = 573405872
+Failed to load track with song_id = 477105982
+Failed to load track with song_id = 476376562
+Failed to load track with song_id = 475013082
+Failed to load track with song_id = 462215562
+Failed to load track with song_id = 480869132
+Failed to load track with song_id = 472628062
+Failed to load track with song_id = 628349892
+Failed to load track with song_id = 481084672
+Failed to load track with song_id = 529265691
+Failed to load track with song_id = 517078542
+Failed to load track with song_id = 590734152
+Failed to load track with song_id = 532296122
+Failed to load track with song_id = 464567632
+Failed to load track with song_id = 476278622
+Failed to load track with song_id = 533982252
+Failed to load track with song_id = 547833122
+Failed to load track with song_id = 608410322
+Failed to load track with song_id = 541736582
+Failed to load track with song_id = 610861462
+Failed to load track with song_id = 516351582
+Failed to load track with song_id = 565583212
+Failed to load track with song_id = 467551612
+Failed to load track with song_id = 585659742
+Failed to load track with song_id = 484077802
+Failed to load track with song_id = 582997142
+Failed to load track with song_id = 582294452
+Failed to load track with song_id = 618527292
+Failed to load track with song_id = 493816772
+Failed to load track with song_id = 496348372
+Failed to load track with song_id = 596680442
+Failed to load track with song_id = 634481742
+Failed to load track with song_id = 475150492
+Failed to load track with song_id = 527044542
+Failed to load track with song_id = 576629942
+Failed to load track with song_id = 519998502
+Failed to load track with song_id = 514917102
+Failed to load track with song_id = 492334142
+Failed to load track with song_id = 505015192
+Failed to load track with song_id = 475145662
+Failed to load track with song_id = 515638462
+Failed to load track with song_id = 581222382
+Failed to load track with song_id = 533764432
+Failed to load track with song_id = 612916712
+Failed to load track with song_id = 539850782
+Failed to load track with song_id = 474982102
+Failed to load track with song_id = 590612542
+Failed to load track with song_id = 517284292
+Failed to load track with song_id = 531947921
+Failed to load track with song_id = 471825722
+Failed to load track with song_id = 531250441
+Failed to load track with song_id = 552926822
+Failed to load track with song_id = 518457952
+Failed to load track with song_id = 466191422
+Failed to load track with song_id = 468407422
+Failed to load track with song_id = 505748102
+Failed to load track with song_id = 549311202
+Failed to load track with song_id = 514852272
+Failed to load track with song_id = 511751402
+Failed to load track with song_id = 465635252
+Failed to load track with song_id = 471309692
+Failed to load track with song_id = 612007432
+Failed to load track with song_id = 479884582
+Failed to load track with song_id = 589652662
+Failed to load track with song_id = 568121042
+Failed to load track with song_id = 466322172
+Failed to load track with song_id = 624912422
+Failed to load track with song_id = 474470542
+Failed to load track with song_id = 596680462
+Failed to load track with song_id = 596646942
+Failed to load track with song_id = 630414492
+Failed to load track with song_id = 541589612
+Failed to load track with song_id = 545956142
+Failed to load track with song_id = 528301691
+Failed to load track with song_id = 524818792
+Failed to load track with song_id = 470205032
+Failed to load track with song_id = 518946252
+Failed to load track with song_id = 461288082
+Failed to load track with song_id = 468401822
+Failed to load track with song_id = 473184402
+Failed to load track with song_id = 540940062
+Failed to load track with song_id = 562719822
+Failed to load track with song_id = 622332522
+Failed to load track with song_id = 572434182
+Failed to load track with song_id = 567356872
+Failed to load track with song_id = 462928962
+Failed to load track with song_id = 572570972
+Failed to load track with song_id = 507755542
+Failed to load track with song_id = 491555242
+Failed to load track with song_id = 558504142
+Failed to load track with song_id = 617319852
+Failed to load track with song_id = 465616852
+Failed to load track with song_id = 599998692
+Failed to load track with song_id = 598077642
+Failed to load track with song_id = 607711722
+Failed to load track with song_id = 567722862
+Failed to load track with song_id = 473875252
+Failed to load track with song_id = 530019861
+Failed to load track with song_id = 586163852
+Failed to load track with song_id = 483132842
+Failed to load track with song_id = 571239892
+Failed to load track with song_id = 496815392
+Failed to load track with song_id = 515966752
+Failed to load track with song_id = 480861622
+Failed to load track with song_id = 531223861
+Failed to load track with song_id = 590465542
+Failed to load track with song_id = 604054202
+Failed to load track with song_id = 577598222
+Failed to load track with song_id = 514951852
+Failed to load track with song_id = 490034482
+Failed to load track with song_id = 627410642
+Failed to load track with song_id = 508181932
+Failed to load track with song_id = 487059782
+Failed to load track with song_id = 529118411
+Failed to load track with song_id = 529630101
+Failed to load track with song_id = 514111242
+Failed to load track with song_id = 521613602
+Failed to load track with song_id = 542389592
+Failed to load track with song_id = 641342052
+Failed to load track with song_id = 619867692
+Failed to load track with song_id = 568867812
+Failed to load track with song_id = 466801522
+Failed to load track with song_id = 631121162
+Failed to load track with song_id = 500510642
+Failed to load track with song_id = 482889882
+Failed to load track with song_id = 508837532
+Failed to load track with song_id = 572941032
+Failed to load track with song_id = 531222611
+Failed to load track with song_id = 633351172
+Failed to load track with song_id = 488651962
+Failed to load track with song_id = 568120872
+Failed to load track with song_id = 528265631
+Failed to load track with song_id = 534726242
+Failed to load track with song_id = 516351602
+Failed to load track with song_id = 620819882
+Failed to load track with song_id = 563626042
+Failed to load track with song_id = 561682512
+Failed to load track with song_id = 561228722
+Failed to load track with song_id = 608222092
+Failed to load track with song_id = 468468882
+Failed to load track with song_id = 472875912
+Failed to load track with song_id = 460699612
+Failed to load track with song_id = 582169152
+Failed to load track with song_id = 547237592
+Failed to load track with song_id = 496361172
+Failed to load track with song_id = 480331852
+Failed to load track with song_id = 523926962
+Failed to load track with song_id = 511062532
+Failed to load track with song_id = 504093462
+Failed to load track with song_id = 570417302
+Failed to load track with song_id = 463406222
+Failed to load track with song_id = 485790502
+Execute the following in a terminal:
+tensorboard --logdir=/cluster/storage/kibrahim/per_class_cnn_experiment/experiments/C2_adadelta_30secs_Results/car_Per_class_/2019-04-18_11-33-10
+Traceback (most recent call last):
+  File "./C2_adadelta_30secs.py", line 134, in <module>
+    main()
+  File "./C2_adadelta_30secs.py", line 116, in main
+    model = get_model()
+  File "./C2_adadelta_30secs.py", line 77, in get_model
+    Dense(1, activation='sigmoid', name="dense_2"),
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/engine/sequential.py", line 93, in __init__
+    self.add(layer)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/engine/sequential.py", line 181, in add
+    output_tensor = layer(self.outputs[0])
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/engine/base_layer.py", line 457, in __call__
+    output = self.call(inputs, **kwargs)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/layers/normalization.py", line 185, in call
+    epsilon=self.epsilon)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/backend/tensorflow_backend.py", line 1858, in normalize_batch_in_training
+    if not _has_nchw_support() and list(reduction_axes) == [0, 2, 3]:
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/backend/tensorflow_backend.py", line 292, in _has_nchw_support
+    gpus_available = len(_get_available_gpus()) > 0
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/backend/tensorflow_backend.py", line 278, in _get_available_gpus
+    _LOCAL_DEVICES = get_session().list_devices()
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/backend/tensorflow_backend.py", line 186, in get_session
+    _SESSION = tf.Session(config=config)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/tensorflow/python/client/session.py", line 1482, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/tensorflow/python/client/session.py", line 622, in __init__
+    self._session = tf_session.TF_NewDeprecatedSession(opts, status)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/tensorflow/python/framework/errors_impl.py", line 473, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.InternalError: Failed to create session.
