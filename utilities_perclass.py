@@ -29,6 +29,7 @@ def load_train_set_raw(TRAIN_PATH,FRAMES_NUMBER,SEGMENT_START,SPECTROGRAM_PATH=S
             spectrograms[idx] = spect[:,SEGMENT_START:SEGMENT_START + FRAMES_NUMBER,:]
             songs_ID[idx] = filename
     print("Failed to load " + str(counter) + "tracks")
+    del train_ground_truth
     non_empty_rows = ~np.all(spectrograms == 0, axis=(1,2))
     spectrograms = spectrograms[non_empty_rows]
     train_classes = train_classes[non_empty_rows]
@@ -134,7 +135,7 @@ def plot_confusion_matrix(y_true, y_pred, classes, path, label,
 
     print(cm)
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize = (10,10))
     im = ax.imshow(cm, interpolation='nearest', cmap=cmap)
     ax.figure.colorbar(im, ax=ax)
     # We want to show all ticks...

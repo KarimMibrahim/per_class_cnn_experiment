@@ -5,10 +5,11 @@
 #$ -m abes
 #$ -S /bin/bash
 #$ -j y
-#$ -l hostname=tsicluster12
+#$ -l hostname=tsicluster13
 #$ -l gpu=1
-#$ -o /ldaphome/kibrahim/per_class_cnn_experiment/C4_adaldelta_30secs.txt
+#$ -v CUDA_VISIBLE_DEVICES=0
+#$ -o /ldaphome/kibrahim/per_class_cnn_experiment/C4_adaldelta_30secs13.txt
 #$ -e /ldaphome/kibrahim/per_class_cnn_experiment/C4_adaldelta_30secs.log
 
-source /ldaphome/kibrahim/context_classification_cnn/env_tf/bin/activate
+source /ldaphome/kibrahim/context_classification_cnn/env_tf_1.2/bin/activate
 python ./C4_adaldelta_30secs.py

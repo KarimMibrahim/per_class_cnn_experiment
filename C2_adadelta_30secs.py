@@ -35,9 +35,6 @@ set_random_seed(2)
 SOURCE_PATH = "/cluster/storage/kibrahim/per_class_cnn_experiment/"
 SPECTROGRAMS_PATH = "/cluster/storage/kibrahim/mel_specs/"
 
-"""
-DEFINE PARAMETERS
-"""
 FRAMES_NUMBER = 646
 SEGMENT_START = 323 # starting frame for segmentation, i.e. for a 30 seconds segment, start at frame 323 = ~15 seconds
 RESULTS_SAVING_Path = "C2_adadelta_30secs_Results"
@@ -45,9 +42,10 @@ optimization = optimizers.Adadelta()
 
 
 INPUT_SHAPE = (FRAMES_NUMBER, 96, 1)
-LABELS_LIST = ['car', 'chill', 'club', 'dance', 'gym', 'happy', 'morning', 'night', 'park', 'party', 'relax', 'running',
-               'sad',
-               'shower', 'sleep', 'summer', 'train', 'training', 'work', 'workout']
+#LABELS_LIST = ['car', 'chill', 'club', 'dance', 'gym', 'happy', 'morning', 'night', 'park', 'party', 'relax', 'running',
+#               'sad','shower', 'sleep', 'summer', 'train', 'training', 'work', 'workout']
+LABELS_LIST = ['car', 'chill', 'club', 'dance', 'night', 'relax','sad','sleep']
+
 
 def get_model():
     # Define model architecture
@@ -86,20 +84,20 @@ def compile_model(model, loss='binary_crossentropy', optimizer='sgd', metrics=['
 
 def main():
     # initialize results array 
-    labels_results = np.zeros([20,6])
+    labels_results = np.zeros([len(LABELS_LIST),6])
     # Loading datasets
     for idx,label in enumerate(LABELS_LIST):
         print("training for class : " + label)
         training_dataset,training_classes = load_train_set_raw(os.path.join(SOURCE_PATH, "GroundTruth/", 
                                                                 label+"_train_groundtruth.csv"),FRAMES_NUMBER,SEGMENT_START)
-        X_train, X_val, y_train, y_val = train_test_split(training_dataset, training_classes, test_size=0.2, random_state=0,shuffle=False)
+        X_train, X_val, y_train, y_val = train_test_split(training_dataset, training_classes, test_size=0.2, random_state=0, stratify =training_classes)
         # Defining saving paths
         exp_dir = os.path.join(SOURCE_PATH, "experiments/",RESULTS_SAVING_Path)
         experiment_name = os.path.join(label + "_Per_class_", strftime("%Y-%m-%d_%H-%M-%S", localtime()))
         Model_save_path = os.path.join(SOURCE_PATH, "Saved_models/", label + "_Per_class_", strftime("%Y-%m-%d_%H-%M-%S", localtime()))
         fit_config = {
             "batch_size":32,
-            "epochs": 30,
+            "epochs": 20,
             "initial_epoch": 0,
             "callbacks": [
                 TensorBoard(log_dir=os.path.join(exp_dir, experiment_name)),
@@ -124,10 +122,10 @@ def main():
                                                       saving_path=os.path.join(exp_dir, experiment_name))
         get_TP_TN_FP_FN(songs_ID,test_pred,test_classes,os.path.join(exp_dir, experiment_name),label) # saving samples of true negative, false negativest etc..
         plot_loss_acuracy(history,os.path.join(exp_dir, experiment_name),label)
-        plot_confusion_matrix(test_classes,predictions,["Negative","Positive"],os.path.join(exp_dir, experiment_name),label)
+        plot_confusion_matrix(test_classes,test_pred,["Negative","Positive"],os.path.join(exp_dir, experiment_name),label)
         labels_results[idx,:] = [len(training_classes),accuracy, auc_roc, recall, precision, f1]       
     labels_results_df = pd.DataFrame(labels_results,index = LABELS_LIST , columns  = [ "Training Size","Accuracy", "AUC_ROC", "Recall", "Precision", "f1"])
-    labels_results_df.to_csv(os.path.join(exp_dir, 'results_summary.csv'))
+    labels_results_df.to_csv(os.path.join(exp_dir, 'results_summary.csv'),float_format='%.3f')
      
      
 if __name__ == "__main__":

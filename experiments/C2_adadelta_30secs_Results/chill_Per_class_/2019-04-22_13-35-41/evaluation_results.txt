@@ -1,0 +1,5 @@
+Exact match accuracy is: 68.51174002321221%
+Area Under the Curve (AUC) is: 0.7625802912691624
+recall is: 0.8281946177152023
+precision is: 0.6445214979195562
+f1 is: 0.7249044536307621
