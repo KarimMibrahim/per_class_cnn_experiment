@@ -1,0 +1,45 @@
+Traceback (most recent call last):
+  File "./main.py", line 11, in <module>
+    from models import get_model,compile_model
+  File "/cluster/storage/kibrahim/per_class_cnn_experiment/models.py", line 47
+    else if model_name == 'C1_time'::
+          ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "./main.py", line 11, in <module>
+    from models import get_model,compile_model
+  File "/cluster/storage/kibrahim/per_class_cnn_experiment/models.py", line 47
+    elif model_name == 'C1_time'::
+                                 ^
+SyntaxError: invalid syntax
+Using TensorFlow backend.
+training for class : car
+Failed to load 480tracks
+Traceback (most recent call last):
+  File "./main.py", line 92, in <module>
+    main()
+  File "./main.py", line 67, in main
+    EarlyStopping(monitor='val_loss', min_delta=0, patience=10, verbose=1,mode='min', restore_best_weights=True)
+NameError: name 'EarlyStopping' is not defined
+Using TensorFlow backend.
+training for class : car
+Failed to load 480tracks
+Traceback (most recent call last):
+  File "./main.py", line 92, in <module>
+    main()
+  File "./main.py", line 71, in main
+    model = get_model(model_name)
+  File "/cluster/storage/kibrahim/per_class_cnn_experiment/models.py", line 25, in get_model
+    if model_name == 'C2_square': 
+NameError: name 'model_name' is not defined
+Using TensorFlow backend.
+training for class : car
+Failed to load 480tracks
+Traceback (most recent call last):
+  File "./main.py", line 92, in <module>
+    main()
+  File "./main.py", line 71, in main
+    model = get_model(model_name)
+  File "/cluster/storage/kibrahim/per_class_cnn_experiment/models.py", line 29, in get_model
+    InputLayer(input_shape=INPUT_SHAPE, name="input_layer"),
+NameError: name 'INPUT_SHAPE' is not defined
