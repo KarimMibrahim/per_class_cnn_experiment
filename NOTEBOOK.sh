@@ -5,7 +5,7 @@
 #$ -m abes
 #$ -S /bin/bash
 #$ -j y
-#$ -l hostname=tsicluster11
+#$ -l hostname=tsicluster12
 #$ -l gpu=1
 #$ -o /ldaphome/kibrahim/per_class_cnn_experiment/NOTEBOOK.txt
 #$ -e /ldaphome/kibrahim/per_class_cnn_experiment/NOTEBOOK.log

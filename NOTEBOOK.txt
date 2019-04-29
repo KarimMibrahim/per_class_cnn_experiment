@@ -31,3 +31,135 @@
 [W 15:55:56.423 NotebookApp] Notebook Classification_Analysis.ipynb is not trusted
 [W 19:04:26.476 NotebookApp] WebSocket ping timeout after 119997 ms.
 [I 19:04:37.482 NotebookApp] Starting buffering for 9303a1a4-44df-4aa6-9875-70d4136fd569:65029612b808460a8b16e0bec83ffbf4
+[W 14:30:54.773 NotebookApp] Notebook Classification_Analysis.ipynb is not trusted
+[I 14:30:55.233 NotebookApp] Adapting to protocol v5.1 for kernel 9303a1a4-44df-4aa6-9875-70d4136fd569
+[I 14:32:03.709 NotebookApp] Saving file at /Classification_Analysis.ipynb
+[W 14:32:03.711 NotebookApp] Notebook Classification_Analysis.ipynb is not trusted
+[I 14:32:03.797 NotebookApp] Starting buffering for 9303a1a4-44df-4aa6-9875-70d4136fd569:4f7c3f92c2864256a3fed44500f325f3
+[I 14:32:15.068 NotebookApp] Creating new notebook in 
+[I 14:32:17.070 NotebookApp] Kernel started: cdd9abb1-50ab-40de-ac91-cbb393dfb5af
+[I 14:32:25.423 NotebookApp] Adapting to protocol v5.1 for kernel cdd9abb1-50ab-40de-ac91-cbb393dfb5af
+[I 14:34:17.057 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:36:17.053 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:38:07.265 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:40:17.055 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:42:17.056 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:44:17.052 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:46:17.419 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:48:20.069 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:50:17.055 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:52:17.055 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:54:17.056 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:56:17.047 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 14:58:17.083 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[W 15:02:36.623 NotebookApp] Notebook Classification_Analysis.ipynb is not trusted
+[I 15:02:37.134 NotebookApp] Adapting to protocol v5.1 for kernel 9303a1a4-44df-4aa6-9875-70d4136fd569
+[I 15:02:56.745 NotebookApp] Starting buffering for 9303a1a4-44df-4aa6-9875-70d4136fd569:77f2dac7761a4049919b3712b57ef97c
+[I 15:05:42.540 NotebookApp] Creating new notebook in 
+[I 15:05:49.495 NotebookApp] Kernel started: 5d0091bc-895d-462e-a5db-00be1bf9682c
+[I 15:06:00.869 NotebookApp] Adapting to protocol v5.1 for kernel 5d0091bc-895d-462e-a5db-00be1bf9682c
+[W 15:06:32.779 NotebookApp] Notebook Classification_Analysis.ipynb is not trusted
+[I 15:06:33.319 NotebookApp] Adapting to protocol v5.1 for kernel 9303a1a4-44df-4aa6-9875-70d4136fd569
+[I 15:07:50.425 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:08:17.052 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 15:09:49.496 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:10:17.431 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 15:33:49.496 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:35:49.498 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:37:49.496 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:39:49.497 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:41:49.494 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:51:49.501 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:53:49.501 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:55:49.499 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:57:49.498 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 15:59:49.486 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:01:49.489 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:03:49.486 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:05:54.487 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:07:49.489 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:09:49.491 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:11:49.489 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:13:49.498 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:15:49.487 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:17:49.489 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:43:54.492 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:44:31.281 NotebookApp] Starting buffering for 9303a1a4-44df-4aa6-9875-70d4136fd569:7ccad18c00a348df8a9d4958815df43c
+[I 16:45:49.493 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:55:49.482 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 16:57:49.482 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 17:01:54.482 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 17:03:49.481 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[W 18:30:25.427 NotebookApp] WebSocket ping timeout after 119998 ms.
+[I 18:30:30.437 NotebookApp] Starting buffering for cdd9abb1-50ab-40de-ac91-cbb393dfb5af:36052e46abe846de8c57737ddb075bdb
+[W 18:30:40.437 NotebookApp] WebSocket ping timeout after 129559 ms.
+[I 18:30:45.440 NotebookApp] Starting buffering for 5d0091bc-895d-462e-a5db-00be1bf9682c:6456961a0eff4be08f600bb0b808cfed
+[I 11:43:09.668 NotebookApp] Adapting to protocol v5.1 for kernel 5d0091bc-895d-462e-a5db-00be1bf9682c
+[I 11:43:14.684 NotebookApp] Restoring connection for 5d0091bc-895d-462e-a5db-00be1bf9682c:6456961a0eff4be08f600bb0b808cfed
+[I 11:43:14.704 NotebookApp] Adapting to protocol v5.1 for kernel cdd9abb1-50ab-40de-ac91-cbb393dfb5af
+[I 11:43:14.709 NotebookApp] Restoring connection for cdd9abb1-50ab-40de-ac91-cbb393dfb5af:36052e46abe846de8c57737ddb075bdb
+[I 11:43:14.714 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 11:44:38.562 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 11:46:38.551 NotebookApp] Saving file at /Negtaive_examples_split.ipynb
+[I 14:14:05.966 NotebookApp] Creating new notebook in 
+[I 14:14:14.598 NotebookApp] Kernel started: 97b8b181-7906-4b5e-b490-0adbaecfac1b
+[I 14:14:32.851 NotebookApp] Adapting to protocol v5.1 for kernel 97b8b181-7906-4b5e-b490-0adbaecfac1b
+[I 14:15:10.143 NotebookApp] Starting buffering for 97b8b181-7906-4b5e-b490-0adbaecfac1b:0cd0cd5a01c842d287ee2bb97690ddda
+[I 14:15:10.458 NotebookApp] Kernel shutdown: 97b8b181-7906-4b5e-b490-0adbaecfac1b
+[I 14:15:15.978 NotebookApp] Kernel started: 9fd30ab2-3985-4f9a-a9bb-365fa15d02cc
+[I 14:15:29.262 NotebookApp] Adapting to protocol v5.1 for kernel 9fd30ab2-3985-4f9a-a9bb-365fa15d02cc
+[I 14:16:14.507 NotebookApp] Saving file at /Plotting models.ipynb
+2019-04-25 14:16:44.754926: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+[I 14:18:14.511 NotebookApp] Saving file at /Plotting models.ipynb
+[I 14:23:10.756 NotebookApp] Serving notebooks from local directory: /cluster/storage/kibrahim/per_class_cnn_experiment
+[I 14:23:10.757 NotebookApp] The Jupyter Notebook is running at:
+[I 14:23:10.757 NotebookApp] http://localhost:8888/?token=702c7460b46dba0b901f93ea314ab4ba503df2e2bed81bcd
+[I 14:23:10.758 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:23:10.783 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///cluster/storage/kibrahim/.local/share/jupyter/runtime/nbserver-51029-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=702c7460b46dba0b901f93ea314ab4ba503df2e2bed81bcd
+[I 14:24:30.467 NotebookApp] 302 GET /?token=702c7460b46dba0b901f93ea314ab4ba503df2e2bed81bcd (::1) 1.43ms
+[W 14:24:39.827 NotebookApp] Notebook Classification_Analysis.ipynb is not trusted
+[I 14:24:45.618 NotebookApp] Kernel started: 65b8f408-f5b2-43a4-b2f4-3b4c815cec0e
+[I 14:24:48.156 NotebookApp] Kernel started: 946054d0-6640-4714-b648-7cf9f608e762
+[I 14:24:53.214 NotebookApp] Adapting to protocol v5.1 for kernel 65b8f408-f5b2-43a4-b2f4-3b4c815cec0e
+[I 14:24:56.265 NotebookApp] Adapting to protocol v5.1 for kernel 946054d0-6640-4714-b648-7cf9f608e762
+[I 14:24:58.498 NotebookApp] Starting buffering for 946054d0-6640-4714-b648-7cf9f608e762:1d6c427735a44e2c82854f994d6c7176
+[I 14:24:58.912 NotebookApp] Kernel shutdown: 946054d0-6640-4714-b648-7cf9f608e762
+[I 14:24:59.038 NotebookApp] Kernel started: 36367c93-7542-4316-8dc3-442c1bd8b3e6
+[I 14:25:04.792 NotebookApp] Adapting to protocol v5.1 for kernel 36367c93-7542-4316-8dc3-442c1bd8b3e6
+[I 14:26:48.111 NotebookApp] Saving file at /Plotting models.ipynb
+[I 14:28:48.109 NotebookApp] Saving file at /Plotting models.ipynb
+[I 14:30:23.363 NotebookApp] Saving file at /Plotting models.ipynb
+[I 14:30:48.108 NotebookApp] Saving file at /Plotting models.ipynb
+[I 14:32:48.110 NotebookApp] Saving file at /Plotting models.ipynb
+[I 14:34:48.151 NotebookApp] Saving file at /Plotting models.ipynb
+[I 14:36:48.113 NotebookApp] Saving file at /Plotting models.ipynb
+[I 14:38:48.111 NotebookApp] Saving file at /Plotting models.ipynb
+[I 18:52:48.081 NotebookApp] Saving file at /Plotting models.ipynb
+[W 12:14:34.797 NotebookApp] WebSocket ping timeout after 119995 ms.
+[I 12:14:39.801 NotebookApp] Starting buffering for 36367c93-7542-4316-8dc3-442c1bd8b3e6:1d6c427735a44e2c82854f994d6c7176
+[W 12:14:53.252 NotebookApp] WebSocket ping timeout after 119997 ms.
+[I 12:14:58.256 NotebookApp] Starting buffering for 65b8f408-f5b2-43a4-b2f4-3b4c815cec0e:b0c383a3105d4bae9b6693865592c8d0
+[I 13:04:51.571 NotebookApp] Serving notebooks from local directory: /cluster/storage/kibrahim/per_class_cnn_experiment
+[I 13:04:51.572 NotebookApp] The Jupyter Notebook is running at:
+[I 13:04:51.573 NotebookApp] http://localhost:8888/?token=00ebf3cf664e8ff678d5f05076b1d731de05e8839090f666
+[I 13:04:51.574 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 13:04:51.654 NotebookApp] 
+    
+    To access the notebook, open this file in a browser:
+        file:///cluster/storage/kibrahim/.local/share/jupyter/runtime/nbserver-81744-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=00ebf3cf664e8ff678d5f05076b1d731de05e8839090f666
+[I 13:05:33.066 NotebookApp] 302 GET /notebooks/ (::1) 2.45ms
+[W 13:05:50.103 NotebookApp] 404 GET /token=00ebf3cf664e8ff678d5f05076b1d731de05e8839090f666 (::1) 31.88ms referer=None
+[I 13:05:59.225 NotebookApp] 302 GET /?token=00ebf3cf664e8ff678d5f05076b1d731de05e8839090f666 (::1) 1.09ms
+[I 13:06:15.575 NotebookApp] Kernel started: e5317d96-3ee0-40cb-bc18-229d447e4d4a
+[I 13:06:27.948 NotebookApp] Adapting to protocol v5.1 for kernel e5317d96-3ee0-40cb-bc18-229d447e4d4a
+[I 13:08:15.340 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[I 13:10:15.336 NotebookApp] Saving file at /Unrolling_FN_FP.ipynb
+[W 09:21:57.955 NotebookApp] WebSocket ping timeout after 119998 ms.
+[I 09:22:02.997 NotebookApp] Starting buffering for e5317d96-3ee0-40cb-bc18-229d447e4d4a:025510a057104d4395c0efa6f438a808

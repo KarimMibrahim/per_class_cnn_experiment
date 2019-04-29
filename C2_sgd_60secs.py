@@ -123,7 +123,7 @@ def main():
         plot_confusion_matrix(test_classes,test_pred,["Negative","Positive"],os.path.join(exp_dir, experiment_name),label)
         labels_results[idx,:] = [len(training_classes),accuracy, auc_roc, recall, precision, f1]
     labels_results_df = pd.DataFrame(labels_results,index = LABELS_LIST , columns  = [ "Training Size","Accuracy", "AUC_ROC", "Recall", "Precision", "f1"])
-    labels_results_df.to_csv(os.path.join(exp_dir, RESULTS_SAVING_Path + '.csv'),float_format='%.3f')
+    labels_results_df.to_csv(os.path.join(exp_dir, RESULTS_SAVING_Path + strftime("%Y-%m-%d_%H-%M-%S", localtime()) + '.csv'),float_format='%.3f')
      
      
 if __name__ == "__main__":

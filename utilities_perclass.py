@@ -173,16 +173,20 @@ def get_TP_TN_FP_FN(songs_ID,predictions,test_classes,path,label):
     # saving tracks for TP,TN..
     with open(os.path.join(path,label+"_true_positives.txt"),'w')as f:
         for x in true_positives:
-            f.writelines("https://www.deezer.com/en/track/"+str(int(songs_ID[x])) + "\n")
+            #f.writelines("https://www.deezer.com/en/track/"+str(int(songs_ID[x])) + "\n")
+            f.writelines(str(int(songs_ID[x])) + "\n")
     with open(os.path.join(path,label+"_true_negatives.txt"),'w')as f:
         for x in true_negatives:
-            f.writelines("https://www.deezer.com/en/track/"+str(int(songs_ID[x])) + "\n")
+            #f.writelines("https://www.deezer.com/en/track/"+str(int(songs_ID[x])) + "\n")
+            f.writelines(str(int(songs_ID[x])) + "\n")
     with open(os.path.join(path,label+"_false_positives.txt"),'w')as f:
         for x in false_positives:
-            f.writelines("https://www.deezer.com/en/track/"+str(int(songs_ID[x])) + "\n")
+            #f.writelines("https://www.deezer.com/en/track/"+str(int(songs_ID[x])) + "\n")
+            f.writelines(str(int(songs_ID[x])) + "\n")
     with open(os.path.join(path,label+"_false_negatives.txt"),'w')as f:
         for x in false_negatives:
-            f.writelines("https://www.deezer.com/en/track/"+str(int(songs_ID[x])) + "\n")
+            #f.writelines("https://www.deezer.com/en/track/"+str(int(songs_ID[x])) + "\n")
+            f.writelines(str(int(songs_ID[x])) + "\n")
     return true_positives,true_negatives,false_positives,false_negatives
     
 

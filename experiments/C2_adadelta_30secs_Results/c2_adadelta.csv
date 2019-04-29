@@ -1,0 +1,2 @@
+,Training Size,Accuracy,AUC_ROC,Recall,Precision,f1
+car,12336.000,66.707,0.716,0.685,0.673,0.679
