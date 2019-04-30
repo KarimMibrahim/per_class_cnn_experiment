@@ -43,3 +43,256 @@ Traceback (most recent call last):
   File "/cluster/storage/kibrahim/per_class_cnn_experiment/models.py", line 29, in get_model
     InputLayer(input_shape=INPUT_SHAPE, name="input_layer"),
 NameError: name 'INPUT_SHAPE' is not defined
+2019-04-29 17:18:33.139855: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-29 17:18:33.180512: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-29 17:18:33.181377: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: tsicluster15
+2019-04-29 17:18:33.182190: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: tsicluster15
+2019-04-29 17:18:33.183071: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 390.116.0
+2019-04-29 17:18:33.183866: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  390.87  Tue Aug 21 12:33:05 PDT 2018
+GCC version:  gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
+"""
+2019-04-29 17:18:33.184691: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 390.87.0
+2019-04-29 17:18:33.185466: E tensorflow/stream_executor/cuda/cuda_diagnostics.cc:303] kernel version 390.87.0 does not match DSO version 390.116.0 -- cannot find working devices in this configuration
+Using TensorFlow backend.
+training for class : car
+Failed to load 480tracks
+Traceback (most recent call last):
+  File "./main.py", line 92, in <module>
+    main()
+  File "./main.py", line 74, in main
+    with open(os.path.join(exp_dir, "model_summary.txt"),'w') as fh:
+FileNotFoundError: [Errno 2] No such file or directory: '/cluster/storage/kibrahim/per_class_cnn_experiment/experiments/car/C2_square/model_summary.txt'
+2019-04-29 17:25:13.133006: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-29 17:25:13.142070: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-29 17:25:13.142800: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: tsicluster15
+2019-04-29 17:25:13.143512: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: tsicluster15
+2019-04-29 17:25:13.144475: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 390.116.0
+2019-04-29 17:25:13.145311: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  390.87  Tue Aug 21 12:33:05 PDT 2018
+GCC version:  gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
+"""
+2019-04-29 17:25:13.146094: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 390.87.0
+2019-04-29 17:25:13.146855: E tensorflow/stream_executor/cuda/cuda_diagnostics.cc:303] kernel version 390.87.0 does not match DSO version 390.116.0 -- cannot find working devices in this configuration
+Using TensorFlow backend.
+training for class : car
+Failed to load 480tracks
+Traceback (most recent call last):
+  File "./main.py", line 92, in <module>
+    main()
+  File "./main.py", line 74, in main
+    with open(os.path.join(exp_dir, "model_summary.txt"),'w+') as fh:
+FileNotFoundError: [Errno 2] No such file or directory: '/cluster/storage/kibrahim/per_class_cnn_experiment/experiments/car/C2_square/model_summary.txt'
+2019-04-29 17:37:43.811090: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-29 17:37:43.820534: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-29 17:37:43.821244: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: tsicluster15
+2019-04-29 17:37:43.821925: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: tsicluster15
+2019-04-29 17:37:43.822698: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 390.116.0
+2019-04-29 17:37:43.823393: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  390.87  Tue Aug 21 12:33:05 PDT 2018
+GCC version:  gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
+"""
+2019-04-29 17:37:43.824128: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 390.87.0
+2019-04-29 17:37:43.824872: E tensorflow/stream_executor/cuda/cuda_diagnostics.cc:303] kernel version 390.87.0 does not match DSO version 390.116.0 -- cannot find working devices in this configuration
+Using TensorFlow backend.
+training for class : car
+Failed to load 480tracks
+Traceback (most recent call last):
+  File "./main.py", line 92, in <module>
+    main()
+  File "./main.py", line 74, in main
+    with open(os.path.join(exp_dir, "model_summary.txt"),'w+') as fh:
+FileNotFoundError: [Errno 2] No such file or directory: '/cluster/storage/kibrahim/per_class_cnn_experiment/experiments/car/C2_square/model_summary.txt'
+2019-04-29 17:46:54.773071: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-29 17:46:54.782251: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-29 17:46:54.783093: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: tsicluster15
+2019-04-29 17:46:54.783913: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: tsicluster15
+2019-04-29 17:46:54.784819: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 390.116.0
+2019-04-29 17:46:54.785656: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  390.87  Tue Aug 21 12:33:05 PDT 2018
+GCC version:  gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
+"""
+2019-04-29 17:46:54.786346: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 390.87.0
+2019-04-29 17:46:54.787037: E tensorflow/stream_executor/cuda/cuda_diagnostics.cc:303] kernel version 390.87.0 does not match DSO version 390.116.0 -- cannot find working devices in this configuration
+training for class : car
+Failed to load 480tracks
+Train on 9876 samples, validate on 2470 samples
+Epoch 1/20
+ - 380s - loss: 0.7247 - acc: 0.5122 - val_loss: 0.6845 - val_acc: 0.5640
+Using TensorFlow backend.
+Traceback (most recent call last):
+  File "./main.py", line 94, in <module>
+    main()
+  File "./main.py", line 76, in main
+    history = model.fit(X_train,y_train, validation_data=(X_val, y_val),verbose = 2, **fit_config);
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/engine/training.py", line 1039, in fit
+    validation_steps=validation_steps)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/engine/training_arrays.py", line 217, in fit_loop
+    callbacks.on_epoch_end(epoch, epoch_logs)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/callbacks.py", line 79, in on_epoch_end
+    callback.on_epoch_end(epoch, logs)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/callbacks.py", line 457, in on_epoch_end
+    self.model.save(filepath, overwrite=True)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/engine/network.py", line 1090, in save
+    save_model(self, filepath, overwrite, include_optimizer)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/engine/saving.py", line 379, in save_model
+    f = h5dict(filepath, mode='w')
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/keras/utils/io_utils.py", line 186, in __init__
+    self.data = h5py.File(path, mode=mode)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/h5py/_hl/files.py", line 394, in __init__
+    swmr=swmr)
+  File "/cluster/storage/kibrahim/context_classification_cnn/env_tf/lib/python3.5/site-packages/h5py/_hl/files.py", line 176, in make_fid
+    fid = h5f.create(name, h5f.ACC_TRUNC, fapl=fapl, fcpl=fcpl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 105, in h5py.h5f.create
+OSError: Unable to create file (unable to open file: name = '/cluster/storage/kibrahim/per_class_cnn_experiment/experiments/car/C2_square/last_iter.h5', errno = 2, error message = 'No such file or directory', flags = 13, o_flags = 242)
+Using TensorFlow backend.
+training for class : car
+Failed to load 480tracks
+Traceback (most recent call last):
+  File "./main.py", line 94, in <module>
+    main()
+  File "./main.py", line 56, in main
+    os.mkdir(exp_dir)
+FileNotFoundError: [Errno 2] No such file or directory: '/cluster/storage/kibrahim/per_class_cnn_experiment/experiments/car/C2_square'
+2019-04-29 18:21:18.246354: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-29 18:21:18.255553: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-29 18:21:18.256387: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: tsicluster15
+2019-04-29 18:21:18.257191: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: tsicluster15
+2019-04-29 18:21:18.258051: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 390.116.0
+2019-04-29 18:21:18.258799: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  390.87  Tue Aug 21 12:33:05 PDT 2018
+GCC version:  gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
+"""
+2019-04-29 18:21:18.259547: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 390.87.0
+2019-04-29 18:21:18.260335: E tensorflow/stream_executor/cuda/cuda_diagnostics.cc:303] kernel version 390.87.0 does not match DSO version 390.116.0 -- cannot find working devices in this configuration
+training for class : car
+Failed to load 480tracks
+Train on 9876 samples, validate on 2470 samples
+Epoch 1/20
+ - 384s - loss: 0.7272 - acc: 0.5083 - val_loss: 0.6935 - val_acc: 0.5429
+Epoch 2/20
+ - 381s - loss: 0.6865 - acc: 0.5602 - val_loss: 0.6752 - val_acc: 0.5753
+Epoch 3/20
+ - 378s - loss: 0.6603 - acc: 0.6022 - val_loss: 0.6628 - val_acc: 0.5988
+Epoch 4/20
+ - 380s - loss: 0.6231 - acc: 0.6442 - val_loss: 0.6632 - val_acc: 0.6223
+Epoch 5/20
+ - 379s - loss: 0.5574 - acc: 0.7188 - val_loss: 0.6830 - val_acc: 0.6089
+Epoch 6/20
+ - 381s - loss: 0.4444 - acc: 0.7903 - val_loss: 0.8100 - val_acc: 0.5814
+Epoch 7/20
+ - 381s - loss: 0.2911 - acc: 0.8822 - val_loss: 1.3072 - val_acc: 0.5587
+Epoch 8/20
+ - 381s - loss: 0.1533 - acc: 0.9461 - val_loss: 1.1261 - val_acc: 0.5846
+Epoch 9/20
+ - 381s - loss: 0.0888 - acc: 0.9699 - val_loss: 1.4195 - val_acc: 0.5769
+Epoch 10/20
+ - 384s - loss: 0.0632 - acc: 0.9759 - val_loss: 1.4495 - val_acc: 0.5810
+Epoch 11/20
+ - 380s - loss: 0.0497 - acc: 0.9772 - val_loss: 1.5591 - val_acc: 0.5704
+Epoch 12/20
+ - 382s - loss: 0.0461 - acc: 0.9792 - val_loss: 1.6872 - val_acc: 0.5810
+Epoch 13/20
+ - 382s - loss: 0.0414 - acc: 0.9795 - val_loss: 1.8298 - val_acc: 0.5676
+Using TensorFlow backend.
+Restoring model weights from the end of the best epoch
+Epoch 00013: early stopping
+Exact match accuracy is: 59.89382239382239%
+Area Under the Curve (AUC) is: 0.6477289916079003
+recall is: 0.640131888836552
+precision is: 0.6021267168808152
+f1 is: 0.6205479452054794
+saving prediction to disk
+Confusion matrix, without normalization
+[[1123  898]
+ [ 764 1359]]
+Traceback (most recent call last):
+  File "./main.py", line 95, in <module>
+    main()
+  File "./main.py", line 56, in main
+    os.mkdir(os.path.join(SOURCE_PATH, "experiments/",label))
+FileExistsError: [Errno 17] File exists: '/cluster/storage/kibrahim/per_class_cnn_experiment/experiments/car'
+2019-04-30 10:31:54.967606: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-04-30 10:31:54.976845: E tensorflow/stream_executor/cuda/cuda_driver.cc:406] failed call to cuInit: CUDA_ERROR_NO_DEVICE
+2019-04-30 10:31:54.977688: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:158] retrieving CUDA diagnostic information for host: tsicluster15
+2019-04-30 10:31:54.978463: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: tsicluster15
+2019-04-30 10:31:54.979222: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: 390.116.0
+2019-04-30 10:31:54.979966: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:369] driver version file contents: """NVRM version: NVIDIA UNIX x86_64 Kernel Module  390.87  Tue Aug 21 12:33:05 PDT 2018
+GCC version:  gcc version 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
+"""
+2019-04-30 10:31:54.980712: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: 390.87.0
+2019-04-30 10:31:54.981399: E tensorflow/stream_executor/cuda/cuda_diagnostics.cc:303] kernel version 390.87.0 does not match DSO version 390.116.0 -- cannot find working devices in this configuration
+training for class : car
+Failed to load 480tracks
+Train on 9876 samples, validate on 2470 samples
+Epoch 1/20
+ - 382s - loss: 0.7260 - acc: 0.5086 - val_loss: 0.6875 - val_acc: 0.5462
+Epoch 2/20
+ - 380s - loss: 0.6854 - acc: 0.5626 - val_loss: 0.6744 - val_acc: 0.5729
+Epoch 3/20
+ - 382s - loss: 0.6576 - acc: 0.6102 - val_loss: 0.6652 - val_acc: 0.5883
+Epoch 4/20
+ - 380s - loss: 0.6172 - acc: 0.6545 - val_loss: 0.6697 - val_acc: 0.6243
+Epoch 5/20
+ - 382s - loss: 0.5440 - acc: 0.7255 - val_loss: 0.7086 - val_acc: 0.5870
+Epoch 6/20
+ - 382s - loss: 0.4223 - acc: 0.8081 - val_loss: 0.7936 - val_acc: 0.5879
+Epoch 7/20
+ - 383s - loss: 0.2669 - acc: 0.8943 - val_loss: 1.2737 - val_acc: 0.5619
+Epoch 8/20
+ - 381s - loss: 0.1424 - acc: 0.9521 - val_loss: 1.1148 - val_acc: 0.5850
+Epoch 9/20
+ - 381s - loss: 0.0837 - acc: 0.9708 - val_loss: 1.3825 - val_acc: 0.5887
+Epoch 10/20
+ - 382s - loss: 0.0626 - acc: 0.9769 - val_loss: 1.4642 - val_acc: 0.5753
+Epoch 11/20
+ - 382s - loss: 0.0507 - acc: 0.9771 - val_loss: 1.5469 - val_acc: 0.5798
+Epoch 12/20
+ - 382s - loss: 0.0457 - acc: 0.9788 - val_loss: 1.6710 - val_acc: 0.5818
+Epoch 13/20
+ - 383s - loss: 0.0422 - acc: 0.9797 - val_loss: 1.7720 - val_acc: 0.5785
+Restoring model weights from the end of the best epoch
+Epoch 00013: early stopping
+Exact match accuracy is: 58.71138996138996%
+Area Under the Curve (AUC) is: 0.6443883034077187
+recall is: 0.6010362694300518
+precision is: 0.5962616822429907
+f1 is: 0.598639455782313
+saving prediction to disk
+Confusion matrix, without normalization
+[[1157  864]
+ [ 847 1276]]
+Train on 9876 samples, validate on 2470 samples
+Epoch 1/20
+ - 537s - loss: 0.7473 - acc: 0.5114 - val_loss: 0.6751 - val_acc: 0.5725
+Epoch 2/20
+ - 536s - loss: 0.6888 - acc: 0.5465 - val_loss: 0.6697 - val_acc: 0.5939
+Epoch 3/20
+ - 533s - loss: 0.6769 - acc: 0.5709 - val_loss: 0.6610 - val_acc: 0.6008
+Epoch 4/20
+ - 534s - loss: 0.6683 - acc: 0.5872 - val_loss: 0.6902 - val_acc: 0.5567
+Epoch 5/20
+ - 537s - loss: 0.6592 - acc: 0.5946 - val_loss: 0.6613 - val_acc: 0.5935
+Epoch 6/20
+ - 534s - loss: 0.6557 - acc: 0.6033 - val_loss: 0.6723 - val_acc: 0.5822
+Epoch 7/20
+ - 535s - loss: 0.6508 - acc: 0.6096 - val_loss: 0.6534 - val_acc: 0.6093
+Epoch 8/20
+ - 532s - loss: 0.6476 - acc: 0.6129 - val_loss: 0.6716 - val_acc: 0.5939
+Epoch 9/20
+ - 533s - loss: 0.6443 - acc: 0.6175 - val_loss: 0.6544 - val_acc: 0.6239
+Epoch 10/20
+ - 533s - loss: 0.6425 - acc: 0.6187 - val_loss: 0.7014 - val_acc: 0.5773
+Epoch 11/20
+ - 538s - loss: 0.6352 - acc: 0.6278 - val_loss: 0.6553 - val_acc: 0.6045
+Epoch 12/20
+ - 533s - loss: 0.6330 - acc: 0.6318 - val_loss: 0.6493 - val_acc: 0.6077
+Epoch 13/20
+ - 535s - loss: 0.6256 - acc: 0.6391 - val_loss: 0.6508 - val_acc: 0.5996
+Epoch 14/20
+ - 533s - loss: 0.6224 - acc: 0.6466 - val_loss: 0.6478 - val_acc: 0.6113
+Epoch 15/20
+ - 530s - loss: 0.6169 - acc: 0.6486 - val_loss: 0.6468 - val_acc: 0.6101
+Epoch 16/20
+ - 530s - loss: 0.6085 - acc: 0.6556 - val_loss: 0.6609 - val_acc: 0.6166
+Epoch 17/20
+ - 532s - loss: 0.6029 - acc: 0.6671 - val_loss: 0.6476 - val_acc: 0.6134
+Epoch 18/20
+ - 534s - loss: 0.5955 - acc: 0.6681 - val_loss: 0.6702 - val_acc: 0.6073

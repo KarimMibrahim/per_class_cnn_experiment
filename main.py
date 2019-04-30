@@ -52,6 +52,10 @@ def main():
         for model_name in models_list:
             # Defining saving paths
             exp_dir = os.path.join(SOURCE_PATH, "experiments/",label,model_name)
+            if not os.path.exists(os.path.join(SOURCE_PATH, "experiments/",label)):
+                os.mkdir(os.path.join(SOURCE_PATH, "experiments/",label))
+            if not os.path.exists(os.path.join(SOURCE_PATH, "experiments/",label,model_name)):
+                os.mkdir(os.path.join(SOURCE_PATH, "experiments/",label,model_name))
             #experiment_name = os.path.join(label + "_Per_class_", strftime("%Y-%m-%d_%H-%M-%S", localtime()))
             fit_config = {
                 "batch_size":32,
@@ -71,9 +75,9 @@ def main():
             model = get_model(model_name,INPUT_SHAPE)
             compile_model(model,optimizer= optimization)
             # Save model architecture and # of parameters to disc
-            with open(os.path.join(exp_dir, "model_summary.txt"),'w') as fh:
-                model.summary(print_fn=lambda x: fh.write(x + '\n'))
             history = model.fit(X_train,y_train, validation_data=(X_val, y_val),verbose = 2, **fit_config);
+            with open(os.path.join(exp_dir, "model_summary.txt"),'w+') as fh:
+                model.summary(print_fn=lambda x: fh.write(x + '\n'))
             test_pred_prob = model.predict(spectrograms)
             test_pred = np.round(test_pred_prob)  
             accuracy, auc_roc, recall, precision, f1 = evaluate_model(test_pred_prob,test_pred, spectrograms, test_classes,
