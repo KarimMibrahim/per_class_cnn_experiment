@@ -27,6 +27,12 @@ set_random_seed(2)
 SOURCE_PATH = "/cluster/storage/kibrahim/per_class_cnn_experiment/"
 SPECTROGRAMS_PATH = "/cluster/storage/kibrahim/mel_specs/"
 
+"""
+for deezer cluster, uncomment
+"""
+#SOURCE_PATH = "/srv/workspace/research/git_repo"
+#SPECTROGRAMS_PATH = "/srv/workspace/research/melspectrograms"
+
 FRAMES_NUMBER = 646
 SEGMENT_START = 323 # starting frame for segmentation, i.e. for a 30 seconds segment, start at frame 323 = ~15 seconds
 
@@ -87,9 +93,9 @@ def main():
             plot_confusion_matrix(test_classes,test_pred,["Negative","Positive"],os.path.join(exp_dir),label)
             #labels_results[idx,:] = [label,model_name,len(training_classes),accuracy, auc_roc, recall, precision, f1]
             labels_results.append([label,model_name,model.count_params(),len(training_classes),accuracy, auc_roc, recall, precision, f1])    
-        labels_results = np.asarray(labels_results)
-        labels_results_df = pd.DataFrame(labels_results, columns  = [ "Class","Model","# paramters" , "Training Size","Accuracy", "AUC_ROC", "Recall", "Precision", "f1"])
-        labels_results_df.to_csv(os.path.join(SOURCE_PATH, "experiments/", + strftime("%Y-%m-%d_%H-%M-%S", localtime()) + '.csv'),float_format='%.3f')
+    labels_results = np.asarray(labels_results)
+    labels_results_df = pd.DataFrame(labels_results, columns  = [ "Class","Model","# paramters" , "Training Size","Accuracy", "AUC_ROC", "Recall", "Precision", "f1"])
+    labels_results_df.to_csv(os.path.join(SOURCE_PATH, "experiments/", strftime("%Y-%m-%d_%H-%M-%S", localtime()) + '.csv'),float_format='%.3f')
      
      
 if __name__ == "__main__":

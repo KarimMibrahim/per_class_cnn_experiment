@@ -296,3 +296,47 @@ Epoch 17/20
  - 532s - loss: 0.6029 - acc: 0.6671 - val_loss: 0.6476 - val_acc: 0.6134
 Epoch 18/20
  - 534s - loss: 0.5955 - acc: 0.6681 - val_loss: 0.6702 - val_acc: 0.6073
+Epoch 19/20
+ - 536s - loss: 0.5841 - acc: 0.6857 - val_loss: 0.7221 - val_acc: 0.5947
+Epoch 20/20
+ - 544s - loss: 0.5743 - acc: 0.6906 - val_loss: 0.6720 - val_acc: 0.6036
+Exact match accuracy is: 61.003861003861005%
+Area Under the Curve (AUC) is: 0.6736109055575897
+recall is: 0.5176636834667923
+precision is: 0.6499112950916618
+f1 is: 0.5762978500262192
+saving prediction to disk
+Confusion matrix, without normalization
+[[1429  592]
+ [1024 1099]]
+Train on 9876 samples, validate on 2470 samples
+Epoch 1/20
+ - 412s - loss: 0.7627 - acc: 0.5010 - val_loss: 0.6859 - val_acc: 0.5470
+Epoch 2/20
+ - 412s - loss: 0.6901 - acc: 0.5416 - val_loss: 0.6845 - val_acc: 0.5534
+Epoch 3/20
+ - 414s - loss: 0.6867 - acc: 0.5518 - val_loss: 0.6809 - val_acc: 0.5684
+Epoch 4/20
+ - 411s - loss: 0.6782 - acc: 0.5741 - val_loss: 0.6745 - val_acc: 0.5769
+Epoch 5/20
+ - 413s - loss: 0.6723 - acc: 0.5767 - val_loss: 0.6668 - val_acc: 0.5960
+Epoch 6/20
+ - 412s - loss: 0.6682 - acc: 0.5873 - val_loss: 0.6706 - val_acc: 0.5741
+Epoch 7/20
+ - 414s - loss: 0.6623 - acc: 0.5994 - val_loss: 0.6701 - val_acc: 0.5862
+Epoch 8/20
+ - 412s - loss: 0.6581 - acc: 0.6011 - val_loss: 0.6668 - val_acc: 0.5988
+Epoch 9/20
+ - 411s - loss: 0.6533 - acc: 0.6101 - val_loss: 0.6692 - val_acc: 0.5883
+Epoch 10/20
+ - 411s - loss: 0.6481 - acc: 0.6140 - val_loss: 0.6781 - val_acc: 0.5806
+Epoch 11/20
+ - 411s - loss: 0.6386 - acc: 0.6291 - val_loss: 0.6729 - val_acc: 0.5895
+Epoch 12/20
+ - 413s - loss: 0.6251 - acc: 0.6424 - val_loss: 0.7162 - val_acc: 0.5401
+Epoch 13/20
+ - 411s - loss: 0.6145 - acc: 0.6547 - val_loss: 0.6973 - val_acc: 0.5510
+Epoch 14/20
+ - 413s - loss: 0.6024 - acc: 0.6697 - val_loss: 0.7322 - val_acc: 0.5393
+Epoch 15/20
+ - 412s - loss: 0.5867 - acc: 0.6832 - val_loss: 0.7071 - val_acc: 0.5911
